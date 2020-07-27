@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './../app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +15,18 @@ import { ShareModule } from '../share/share.module';
     PagesModule,
     ShareModule,
     AppRoutingModule
+  ],
+  exports:[
+    ShareModule,
+    AppRoutingModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor(@SkipSelf() @Optional() parentModule: CoreModule){
+    if( parentModule){
+      throw new Error(
+        'CoreModule only for appModule import'
+      )
+    }
+  }
+ }
