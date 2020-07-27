@@ -1,0 +1,48 @@
+@import "../styles/typographie"
+@import "../styles/variable"
+    
+//////////////textfiled    style origen   ne pas modifier!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+///////////////////////////////////////////////////////////////////////////////////
+
+.textfiled
+    padding: 6px 6px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between   
+    // width
+    margin: 4px 24px 4px 24px
+    position: relative
+    
+    &:hover  
+        .divtextarea
+            @include contour-hover
+            border: solid 1px $bleu-clair
+        .titletextfiled
+            @include description-2
+            color: $bleu-notif
+            top: 0px
+            margin-top: 14px
+    .titletextfiled
+        position: absolute
+        top: 0px
+        @include description-2
+        margin-left: 14px
+        margin-top: 14px
+    .divtextarea
+        border: solid 1px $transparent
+        background-color: $white
+        width: calc( 100% - 28px )
+        overflow-y: visible
+        border-radius: 5px
+        @include contourbold
+        padding: 24px 14px 8px 13px
+        outline-style: none
+        &:active, &:focus 
+            ~.titletextfiled
+                display: none
+        .textarea-content
+            max-height: 195px
+            overflow-y: auto
+            outline: none
+            

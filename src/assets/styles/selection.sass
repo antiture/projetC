@@ -1,0 +1,44 @@
+@import "../styles/typographie"
+    
+@import "../styles/variable"
+//////////////option  style origen   ne pas modifier!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+///////////////////////////////////////////////////////////////////////////////////
+select 
+    outline: none
+.selection
+    padding: 6px 6px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between   
+    ///width selection
+    margin: 4px 24px 4px 24px
+    position: relative
+    &:hover
+        .titleselection
+            color: $bleu-notif !important
+            @include description-2
+    .titleselection
+        position: absolute
+        top: 0px
+        @include description-2
+        margin-left: 14px
+        margin-top: 16px
+    .selectionoption
+        @include text-1
+        padding: 20px
+        border-radius: 5px 
+        border: solid 1px $transparent
+        @include contourbold
+        padding: 24px 38px 4px 14px 
+        cursor: pointer
+        width: 100%
+        background: url("../../../../src/assets/Parametre/menuderoulant_bas.svg") no-repeat right transparent
+        background-size: 24px 24px
+        background-position: bottom 4px right 10px
+        margin: 4px 0px
+        appearance: none
+        &:hover
+            background-color: $white  
+            border: solid 1px $bleu
+            @include contourbold_hover

@@ -1,0 +1,56 @@
+
+
+@import "../styles/variable"
+//////////////button   style origen   ne pas modifier!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+///////////////////////////////////////////////////////////////////////////////////
+.buttoncontain
+    padding: 20px 20px
+    
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    .button
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: auto !important
+        height: 34px !important
+        background-color: $buttonhover
+        border-radius: 40px
+        border: none
+        margin: 0px 5px
+        padding: 4px 8px 4px 4px 
+        text-align: center
+        text-decoration: none
+        display: inline-block
+        background-size: 24px
+        background-repeat: no-repeat
+        background-position: center left 10px
+        @include contourbold
+        .icon
+            width: 24px
+            height: 24px
+            fill: $text-hover
+            position: absolute
+            left: 10px
+            top: 5px
+        &:hover
+            background-color: $bleu-notif
+            color: $white
+            .icon
+                fill: $white
+        &:active
+            background-color: $bleu-dark
+        &:disabled
+            background-color: $gray-7
+            color: white
+            .icon
+                fill: white
+        .textbutton
+            height: 20px
+            font-weight: 500
+            font-size: 17px
+            margin: 0px 10px 0px 34px 
+     

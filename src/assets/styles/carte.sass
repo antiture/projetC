@@ -1,0 +1,151 @@
+@import "../styles/variable"
+@import "../styles/typographie"
+
+//////////////carte style origen   ne pas modifier!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+///////////////////////////////////////////////////////////////////////////////////
+
+.carte
+    width: calc( 100% - 15px )
+    padding:  0px 15px 0px 5px 
+    background-color: $white
+    color: $gray-4-inactive
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    border-bottom: solid 1px $gray-8-ligne
+    &:hover
+        color: $colorhead
+        background-color: $selected
+    &:active
+        background-color: $selectedhover
+    .carteleft
+        display: flex
+        flex-direction: row
+        align-items: center
+        .cartenotif
+            position: relative
+            width: 30px
+            height: 30px
+            .pointe
+                position: absolute
+                top: 10px
+                left: 10px
+                width: 10px
+                height: 10px
+                border-radius: 10px
+                background-color: $gray-8-ligne
+                &:active
+                    background-color: $success-bleu
+        .carteiconecontain
+            position: relative
+            width: 35px
+            height: 35px
+            display: flex
+            justify-content: center
+            align-items: center
+            .carteicone
+                width: 33px
+                height: 33px
+            .iconenotif
+                position: absolute
+                fill: $orange
+                width: 20px
+                height: 20px
+                bottom: 0px
+                right: 0px
+                margin-left: -20px
+                margin-top: 27px
+    .carteinfo
+        width: calc( 100% - 122px )
+        height: 60px
+        padding: 0px 10px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between 
+       
+        .carteinfoleft
+            width: calc( 100% - 100px )
+            .carteinfoleft_top
+                width: 100%
+                margin-bottom: 5px
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                font-weight: 700
+                font-size: 17px
+                height: 20px
+                line-height: 20px
+                text-align: left
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+            .carteinfoleft_down
+                height: 20px
+                text-align: left
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow-wrap: break-word
+        .carteinforight
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            .carteinforight_top
+                width: 100px
+                text-align: right
+                height: 20px
+                margin-bottom: 5px
+                @include description-2
+                line-height: 20px
+            .carteinforight-down
+                align-items: center
+                font-weight: 700
+                font-size: 17px
+                height: 20px
+    .carteoutil
+        width: 30px
+        .outil
+            padding: 3px
+            border-radius: 40px
+            &:hover
+                background-color: $buttonhover
+                @include contour
+            img 
+                width: 24px
+                height: 24px
+
+.cartepetit
+    padding: 6px 6px
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: start
+    margin: 10px 30px 10px 30px
+    position: relative
+    @include contourbold
+    border-radius: 5px
+    border-left: solid 5px $red
+    .cartepetit_left
+        height: 100%
+        width: 30px
+        .dossiericonecontain
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 30px
+            height: 30px
+            .carteicone
+                fill: $gray-6-inactive-text
+    .dossierinfo
+        @include text-2
+        margin-left: 10px
+
+.headcarte
+    background-color: $selectedhover
+    border: solid 0px 
+    @include coupe
+
+
+
